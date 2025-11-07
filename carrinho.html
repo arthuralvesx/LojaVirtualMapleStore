@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/carrinho.css">
+</head>
+<body>
+
+<div class="pagina-carrinho-container">
+
+    <div class="carrinho-cabecalho">
+        <img src="./img/carrinho.png" alt="">
+        <h1>Carrinho</h1>
+    </div>
+
+    <div class="carrinho-conteudo-wrapper">
+        <div class="secao-compras">
+            <h2>Compras</h2>
+
+            <div class="tabela-cabecalho">
+                <span class="col-info-produto">PRODUTOS</span>
+                <span class="col-preco">PREÇO</span>
+                <span class="col-qtd">QUANTIDADE</span>
+                <span class="col-subtotal">SUB-TOTAL</span>
+            </div>
+
+            <div class="item-carrinho">
+                <div class="col-info-item">
+                    <span class="btn-remover-item">⊗</span>
+                    <img src="./img/logo.png" alt="Tênis Nike Winflo 11" class="img-item">
+                    <span class="nome-item">Tênis Nike Winflo 11</span>
+                </div>
+                <span class="preco-item">R$70</span>
+                <div class="controle-qtd-item">
+                    <button class="btn-qtd" (click)="descrementar()">-</button>
+                    <input  value='0' class="input-qtd">
+                    <button class="btn-qtd" (click)="incrementar()" >+</button>
+                </div>
+                <span class="valor-subtotal-item">R$70</span>
+            </div>
+
+
+            <button class="btn-atualizar-carrinho">ATUALIZAR CARRINHO</button>
+        </div>
+
+        <div class="secao-resumo">
+            <h2>Total</h2>
+            <div class="linha-resumo">
+                <span>Subtotal</span>
+                <span>R$100</span>
+            </div>
+            <div class="linha-resumo">
+                <span>Envio</span>
+                <span>Grátis</span>
+            </div>
+            <div class="linha-resumo">
+                <span>Desconto</span>
+                <span>R$50</span>
+            </div>
+            <div class="linha-total-resumo">
+                <span>Total</span>
+                <span class="valor-total">R$100.00</span>
+            </div>
+            <button class="btn-finalizar-compra">
+                IR PARA PAGAMENTO 
+            </button>
+            
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>
