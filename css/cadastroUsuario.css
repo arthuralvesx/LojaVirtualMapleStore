@@ -103,6 +103,7 @@ input[type="email"]:focus {
     border-top: 1px solid #ddd;
     margin: 25px 0;
     position: relative;
+    width: 1000px;
 }
 
 .divider span {
