@@ -94,6 +94,19 @@ input[type="email"]:focus {
     transition: 0.2s;
 }
 
+.voltar {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.voltar img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
 .btn-primary:hover {
     background-color: #333;
 }

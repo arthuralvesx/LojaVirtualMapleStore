@@ -144,9 +144,9 @@ input[type="email"]:focus {
 .voltar img {
   width: 24px;
   height: 24px;
-  filter: invert(1);
   transition: transform 0.2s ease;
 }
+
 
 .voltar img:hover {
   transform: scale(1.1);
