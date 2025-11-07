@@ -6,7 +6,7 @@
 }
 
 .header-preto {
-    background-color: rgb(0, 0, 0); 
+    background-color: #000000; 
     width: 100%;             
     text-align: center;
 }
@@ -132,6 +132,24 @@ input[type="email"]:focus {
 
 .btn-secondary:hover {
     background-color: #eaeaea;
+}
+
+.voltar {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.voltar img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+  transition: transform 0.2s ease;
+}
+
+.voltar img:hover {
+  transform: scale(1.1);
 }
 
 @media (max-width: 480px) {

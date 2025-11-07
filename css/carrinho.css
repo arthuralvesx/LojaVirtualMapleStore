@@ -5,7 +5,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 .carrinho-cabecalho {
     display: flex;
     align-items: center;
@@ -50,9 +49,8 @@
     font-weight: 500;
     margin-top: 0;
     margin-bottom: 25px;
-    
-}
 
+}
 
 .tabela-cabecalho,
 .item-carrinho {
@@ -61,8 +59,6 @@
     gap: 15px;
     align-items: center;
 }
-
-
 
 .tabela-cabecalho {
     padding: 10px 24px;
@@ -90,8 +86,6 @@
     transition: color 0.1s;
 }
 
-
-
 .img-item {
     width: 60px;
     height: 60px;
@@ -108,7 +102,6 @@
     font-weight: 500;
     text-align: center;
 }
-
 
 .controle-qtd-item {
     display: flex;
@@ -127,7 +120,6 @@
     border: none;
     cursor: pointer;
     font-size: 1.2em;
-    /* padding: 0 10px; */
     height: 100%;
 }
 
@@ -141,7 +133,6 @@
     font-size: 1em;
     height: 100%;
 }
-
 
 .btn-atualizar-carrinho {
     background: none;
@@ -161,7 +152,6 @@
     transform: translateY(-2px);
     box-shadow: 0 6px 15px #39618b66;
 }
-
 
 .secao-resumo {
     flex: 1;
@@ -190,11 +180,8 @@
     margin-top: 15px;
     padding-top: 15px;
     border-top: 1px solid #E4E7E9;
-    
+
 }
-
-
-
 
 .btn-finalizar-compra {
     background-color: #000000;
@@ -213,16 +200,14 @@
 }
 
 .btn-finalizar-compra:hover {
-      transform: translateY(-2px);
+    transform: translateY(-2px);
     box-shadow: 0 6px 15px #39618b66;
 }
-
 
 .icone-seta {
     margin-left: 10px;
     font-size: 1.4em;
 }
-
 
 .resumo-bloco-vazio {
     background-color: white;
@@ -230,4 +215,22 @@
     border-radius: 5px;
     height: 80px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.voltar {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.voltar img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+  transition: transform 0.2s ease;
+}
+
+.voltar img:hover {
+  transform: scale(1.1);
 }
