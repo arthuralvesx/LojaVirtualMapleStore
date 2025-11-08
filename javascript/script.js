@@ -1,11 +1,12 @@
+//ações de voltar btn
 document.addEventListener("DOMContentLoaded", () => {
-    const btnCadastro = document.getElementById("btnCadastro");
+  const btnCadastro = document.getElementById("btnCadastro");
 
-    if (btnCadastro) {
-        btnCadastro.addEventListener("click", () => {
-            window.location.href = "cadastroUsuario.html";
-        });
-    }
+  if (btnCadastro) {
+    btnCadastro.addEventListener("click", () => {
+      window.location.href = "cadastroUsuario.html";
+    });
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -24,3 +25,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+//ação carrossel
+document.addEventListener('DOMContentLoaded', () => {
+    const imagens = document.querySelectorAll('.carrossel img');
+    let index = 0;
+
+    function trocarImagem() {
+        if (imagens.length > 0) {
+            imagens[index].classList.remove('active');
+        }
+        index = (index + 1) % imagens.length;
+        imagens[index].classList.add('active');
+    }
+    setInterval(trocarImagem, 4000); 
+
+    if (imagens.length > 0 && !imagens[0].classList.contains('active')) {
+      imagens[0].classList.add('active');
+    }
+});
+

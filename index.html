@@ -1,16 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maple Store - Home</title>
     <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
-    <div class="Container">
-        <img src="./img/imgcontainer.jpg" alt="">
+    <div class="container">
+
+        <div class="carrossel">
+            <img src="./img/imgcontainer.jpg" alt="Imagem 1" class="active">
+            <img src="./img/logobranco.png" alt="Imagem 2">
+            <img src="./img/imgcontainer.jpg" alt="Imagem 3">
+        </div>
+
+        <div class="navbar">
+            <div class="logo">
+                <img src="../img/logobranco.png" alt="Maple Store Logo">
+            </div>
+
+            <div class="icons">
+                <div class="search">
+                    <input type="text" placeholder="Buscar">
+                    <button>
+                        <svg class="buscar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="./carrinho.html">
+                    <div>
+                        <svg class="bag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 
+                         2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="./login.html">
+                    <div>
+                        <svg class="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8
+                         a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
-    
+    <script src="javascript/script.js"></script>
 </body>
+
 </html>
-<h1>Bem vindo Home</h1>
