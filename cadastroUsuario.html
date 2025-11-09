@@ -21,14 +21,17 @@
         <h2>Primeiro acesso</h2>
         <p>Preencha seus dados de cadastro para criar uma conta na maple store</p>
     </div>
+
     <div class="login-container">
-        <form>
-            <input type="text" placeholder="E-mail, CPF ou CNPJ" required>
-            <input type="text" placeholder="Senha" required>
-            <input type="text" placeholder="Confirme sua Senha" required>
+        <form id="formCadastro">
+            <input id="cadEmail" type="text" placeholder="E-mail, CPF ou CNPJ" required>
+            <input id="cadSenha" type="password" placeholder="Senha" required>
+            <input id="cadConfirmar" type="password" placeholder="Confirme sua Senha" required>
             <button type="submit" class="btn-primary">CADASTRAR</button>
         </form>
+        <p id="msgCadastro" class="msg"></p>
     </div>
+
     <script src="javascript/script.js"></script>
 </body>
 
