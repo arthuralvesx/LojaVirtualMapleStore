@@ -30,15 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(trocarImagem, 4000);
 });
 
-// Função principal para iniciar os eventos de login e cadastro
+//login e cadastro
 function iniciarLoginCadastro() {
-  const fCad = document.getElementById('formCadastro');
-  const fLog = document.getElementById('formLogin');
+  const fCadastro = document.getElementById('formCadastro');
+  const fLogin = document.getElementById('formLogin');
   const msgCad = document.getElementById('msgCadastro');
   const msgLog = document.getElementById('msgLogin');
 
-  if (fCad) {
-    fCad.addEventListener('submit', function (e) {
+  if (fCadastro) {
+    fCadastro.addEventListener('submit', function (e) {
       e.preventDefault();
 
       const email = document.getElementById('cadEmail').value.trim().toLowerCase();
@@ -66,7 +66,7 @@ function iniciarLoginCadastro() {
       lsSet(USUARIOS_KEY, usuarios);
 
       msgCad.textContent = 'Cadastro realizado com sucesso! Redirecionando para o login...';
-      fCad.reset();
+      fCadastro.reset();
 
       setTimeout(() => {
         window.location.href = 'login.html';
@@ -74,8 +74,8 @@ function iniciarLoginCadastro() {
     });
   }
 
-  if (fLog) {
-    fLog.addEventListener('submit', function (e) {
+  if (fLogin) {
+    fLogin.addEventListener('submit', function (e) {
       e.preventDefault();
 
       const email = document.getElementById('logEmail').value.trim().toLowerCase();
@@ -118,5 +118,89 @@ function iniciarLoginCadastro() {
     });
   }
 }
-
 document.addEventListener('DOMContentLoaded', iniciarLoginCadastro);
+
+
+//lista de produtos
+const produtos = [
+  {
+    name: "Tênis Nike Air Max DN Masculino",
+    price: "R$ 1.234,99",
+    image: "https://maze.jetassets.com.br/produto/20250922134438_5014994986_H.jpg",
+    description: "O Tênis Nike Air Max DN Masculino é um verdadeiro ícone da moda streetwear, sendo produzido com materiais de alta qualidade que garantem durabilidade e conforto. Confeccionado em tecido respirável, ele proporciona ventilação aos pés, mantendo-os frescos durante todo o dia. Seu design moderno e sofisticado combina perfeitamente com diversas peças do guarda-roupa, tornando-o ideal para quem busca um visual despojado e cheio de estilo."
+  },
+  {
+    name: "Mizuno Wave Prophecy LS Preto",
+    price: "R$ 1.079,99",
+    image: "https://maze.jetassets.com.br/produto/20240620104023_5235994765_H.jpg",
+    description: "Mizuno Wave Prophecy LS Black Com o design icônico e característico da Mizuno, o Wave Prophecy LS Black apresenta uma estética harmoniosa que mescla elementos futuristas e tecnológicos em cada detalhe. O destaque principal deste modelo são as solas equipadas com um avançado sistema de amortecimento, projetado para melhorar o desempenho esportivo enquanto proporciona um conforto excepcional aos pés."
+  },
+  {
+    name: "Tênis Adidas Adi2000 Preto",
+    price: "R$ 799,90",
+    image: "https://maze.jetassets.com.br/produto/20241220141402_7241992759_D.jpg",
+    description: "Inspirado na audácia dos anos 2000, o Adi2000 é um sneaker inovador da Adidas projetado para unir estilo contemporâneo com alto desempenho esportivo. Este modelo apresenta um design aerodinâmico e confortável, equipado com tecnologia avançada de amortecimento, ideal tanto para prática esportiva quanto para uso casual. O Adi2000 incorpora o DNA da Adidas no skate, com uma paleta totalmente preta, destacando as três listras de forma única nas laterais e um cabedal de couro que desta ainda mais o seu visual moderno e atraente."
+  }
+];
+
+//função para gerar o HTML de um produto
+function cardProdutoHTML(p) {
+  return `
+    <div class="product-card-container" 
+         data-name="${p.name}" 
+         data-price="${p.price}" 
+         data-image="${p.image}"
+         data-description="${p.description}">
+      <div class="product-image-container">
+        <img class="product-image" src="${p.image}" alt="${p.name}">
+      </div>
+      <div class="product-details-container">
+        <h2 class="product-name">${p.name}</h2>
+        <p class="product-price">${p.price}</p>
+      </div>
+    </div>
+  `;
+}
+
+//renderiza todos os produtos
+function renderProdutosPagina() {
+  const grid = document.getElementById('produtosGrid');
+  if (!grid) return;
+
+  grid.innerHTML = produtos.map(cardProdutoHTML).join('');
+
+  //renderiza, liga os cliques
+  ligarBotoesProduto();
+}
+
+//função assim que a página carregar
+document.addEventListener('DOMContentLoaded', renderProdutosPagina);
+
+function ligarBotoesProduto() {
+  const productCards = document.querySelectorAll(".product-card-container");
+
+  productCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const productData = {
+        name: card.dataset.name,
+        price: card.dataset.price,
+        image: card.dataset.image,
+        description: card.dataset.description
+      };
+
+      localStorage.setItem("selectedProduct", JSON.stringify(productData));
+      window.location.href = "produto.html";
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const productData = JSON.parse(localStorage.getItem("selectedProduct"));
+
+  if (productData) {
+    document.querySelector(".imagem-principal-produto").src = productData.image;
+    document.querySelector(".titulo-produto").textContent = productData.name;
+    document.querySelector(".preco-produto").textContent = productData.price;
+    document.querySelector(".descricao p").textContent = productData.description;
+  }
+});

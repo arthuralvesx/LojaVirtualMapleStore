@@ -1,3 +1,10 @@
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    font-family: 'Poppins', sans-serif;
+}
+
 .body {
     display: flex;
     justify-content: center;
@@ -28,34 +35,6 @@
     box-shadow: 0 0px 15px #706e6e0d;
 }
 
-.galeria-miniaturas {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.miniatura.ativa {
-    border-radius: 10px;
-}
-
-.miniatura {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    background-size: cover;
-}
-
-.miniatura.ativa,
-.miniatura:hover {
-    border-color: #1889FF;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
 .detalhes-produto {
     flex: 1;
     padding: 40px;
@@ -70,13 +49,6 @@
     color: #333;
     margin-bottom: 10px;
     line-height: 1.2;
-}
-
-.categoria-produto {
-    font-size: 1.1em;
-    color: #777;
-    margin-bottom: 0px;
-    font-weight: 500;
 }
 
 .preco-produto {
@@ -175,4 +147,11 @@
 
 .voltar img:hover {
     transform: scale(1.1);
+}
+
+.descricao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }

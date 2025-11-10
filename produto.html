@@ -9,35 +9,39 @@
 </head>
 
 <body>
-    <div class="container-produto">
-
-        <div class="voltar">
-            <img src="../img/arrow-left.svg" alt="Voltar" id="btnVoltarIndex">
-        </div>
-        <div class="galeria-imagens-produto">
-            <img [src]="imagemPrincipal" alt="Imagem principal do produto" class="imagem-principal-produto"
-                alt="Tênis Nike Winflo 11 Masculino">
-            <div class="galeria-miniaturas">
-                <img *ngFor="let imagem of miniaturas" [src]="imagem" (click)="trocarImagemPrincipal(imagem)"
-                    [class.ativa]="imagem === imagemPrincipal" class="miniatura" />
+    <div class="container">
+        <div class="container-produto">
+            <div class="voltar">
+                <img src="./img/arrow-left.svg" alt="Voltar" id="btnVoltarIndex">
             </div>
-        </div>
 
-        <div class="detalhes-produto">
-            <h1 class="titulo-produto">Tênis Nike Winflo 11 Masculino</h1>
-            <p class="preco-produto">R$ 474,99 <span class="metodo-pagamento">no Pix</span></p>
+            <div class="galeria-imagens-produto">
+                <img src="" alt="Imagem principal do produto" class="imagem-principal-produto">
+            </div>
 
-            <div class="opcoes-tamanho">
-                <p class="rotulo-opcao">Tamanho e numeração</p>
-                <div class="botoes-tamanho">
-                    <button class="botao-tamanho">39</button>
+            <div class="detalhes-produto">
+                <h1 class="titulo-produto"></h1>
+                <p class="preco-produto"></p>
+
+                <div class="opcoes-tamanho">
+                    <p class="rotulo-opcao">Tamanhos</p>
+                    <div class="botoes-tamanho">
+                        <button class="botao-tamanho">39</button>
+                        <button class="botao-tamanho">40</button>
+                        <button class="botao-tamanho">41</button>
+                    </div>
+                </div>
+
+                <div class="acoes">
+                    <button class="btn-primary">ADICIONAR AO CARRINHO</button>
+                    <button class="btn-secondary">SALVAR COMO FAVORITO</button>
                 </div>
             </div>
+        </div>
 
-            <div class="acoes">
-                <button class="btn-primary">ADICIONAR AO CARRINHO</button>
-                <button class="btn-secondary">SALVAR COMO FAVORITO</button>
-            </div>
+        <div class="descricao">
+            <h2>Descrição</h2>
+            <p></p>
         </div>
     </div>
     <script src="javascript/script.js"></script>

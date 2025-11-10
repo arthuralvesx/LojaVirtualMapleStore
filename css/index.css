@@ -198,7 +198,7 @@ svg:hover {
 }
 
 .product-image-container {
-  background-color: #f5f5f5;
+  background-color: #fff;
   padding: 24px;
 }
 
@@ -209,6 +209,7 @@ svg:hover {
 }
 
 .product-details-container {
+  background-color: #0e0d0d0d;
   padding: 24px;
   display: flex;
   flex-direction: column;
