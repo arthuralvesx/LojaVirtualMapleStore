@@ -11,14 +11,13 @@
 <body>
 
     <div class="pagina-carrinho-container">
-
         <div class="voltar">
             <img src="../img/arrow-left.svg" alt="Voltar" id="btnVoltarIndex">
         </div>
 
         <div class="carrinho-cabecalho">
             <img src="./img/carrinho.png" alt="">
-            <h1>Carrinho</h1>
+            <h1>Meu Carrinho</h1>
         </div>
 
         <div class="carrinho-conteudo-wrapper">
@@ -32,30 +31,16 @@
                     <span class="col-subtotal">SUB-TOTAL</span>
                 </div>
 
-                <div class="item-carrinho">
-                    <div class="col-info-item">
-                        <span class="btn-remover-item">⊗</span>
-                        <img src="./img/logo.png" alt="Tênis Nike Winflo 11" class="img-item">
-                        <span class="nome-item">Tênis Nike Winflo 11</span>
-                    </div>
-                    <span class="preco-item">R$70</span>
-                    <div class="controle-qtd-item">
-                        <button class="btn-qtd" (click)="descrementar()">-</button>
-                        <input value='0' class="input-qtd">
-                        <button class="btn-qtd" (click)="incrementar()">+</button>
-                    </div>
-                    <span class="valor-subtotal-item">R$70</span>
-                </div>
+                <div id="itensCarrinho"></div>
 
-
-                <button class="btn-secondary">ATUALIZAR CARRINHO</button>
+                <button class="btn-secondary" id="btnEsvaziar">ESVAZIAR CARRINHO</button>
             </div>
 
             <div class="secao-resumo">
                 <h2>Total</h2>
                 <div class="linha-resumo">
                     <span>Subtotal</span>
-                    <span>R$100</span>
+                    <span id="subtotal">R$ 0,00</span>
                 </div>
                 <div class="linha-resumo">
                     <span>Envio</span>
@@ -63,16 +48,13 @@
                 </div>
                 <div class="linha-resumo">
                     <span>Desconto</span>
-                    <span>R$50</span>
+                    <span>R$ 0,00</span>
                 </div>
                 <div class="linha-total-resumo">
                     <span>Total</span>
-                    <span class="valor-total">R$100.00</span>
+                    <span class="valor-total" id="valorTotal">R$ 0,00</span>
                 </div>
-                <button class="btn-primary">
-                    IR PARA PAGAMENTO
-                </button>
-
+                <button class="btn-primary">IR PARA PAGAMENTO</button>
             </div>
         </div>
     </div>
