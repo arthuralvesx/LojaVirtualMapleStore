@@ -31,7 +31,6 @@
   z-index: 2;
 }
 
-
 .navbar {
   position: absolute;
   top: 50px;
@@ -118,7 +117,6 @@ svg:hover {
   margin: 0 10px;
 }
 
-
 .container-card {
   display: flex;
   justify-content: center;
@@ -148,7 +146,6 @@ svg:hover {
   border-radius: 8px;
   object-fit: cover;
 }
-
 
 .container-produtos {
   font-family: 'Poppins', sans-serif;
@@ -299,4 +296,3 @@ a {
   font-size: 13px;
   border-top: 1px solid #eee;
 }
-
