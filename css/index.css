@@ -1,4 +1,3 @@
-
 .container {
   position: relative;
   width: 100%;
@@ -6,25 +5,25 @@
 
 
 .carrossel {
-    position: relative;
-    width: 100%;
-    height: 100vh; 
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .carrossel img {
 
-    position: absolute;
-    top: 0;          
-    left: 0;      
-    width: 100%;
-    height: 100%; 
-    object-fit: cover;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 1;
 }
 
 .carrossel img.active {
@@ -240,3 +239,64 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.footer {
+  background: #F8F9F9;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  border-top: 1px solid #eee;
+}
+
+.logo-col img {
+  width: 80px;
+}
+
+.logos-social img {
+  width: 90px;
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.payments h4,
+.security h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.payment-icons img {
+  width: 40px;
+  margin: 0 5px;
+}
+
+.payments p {
+  color: #61656B;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.copy {
+  color: #61656B;
+  text-align: center;
+  font-size: 13px;
+  border-top: 1px solid #eee;
+}
+
