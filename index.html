@@ -23,19 +23,12 @@
       </div>
 
       <div class="icons">
-        <div class="search">
-          <input type="text" placeholder="Buscar">
-          <button>
-            <svg class="buscar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </button>
+        <div class="user-wrapper">
+          <span id="olaUsuario" class="ola-user" style="display:none;"></span>
         </div>
 
         <a href="./carrinho.html">
-          <div>
+          <div class="user-wrapper">
             <svg class="bag" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 
@@ -46,12 +39,12 @@
           </div>
         </a>
 
-        <a href="./login.html">
-          <div>
+        <a href="./login.html" id="userArea">
+          <div class="user-wrapper">
             <svg class="user" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 21v-2a4 4 0 0 0-4-4H8
-                       a4 4 0 0 0-4 4v2"></path>
+               a4 4 0 0 0-4 4v2"></path>
               <circle cx="12" cy="7" r="4"></circle>
             </svg>
           </div>
@@ -123,12 +116,24 @@
       <div class="payments">
         <h4>FORMAS DE PAGAMENTO</h4>
         <div class="payment-icons">
-          <img src="https://authenticfeet.vtexassets.com/assets/vtex/assets-builder/authenticfeet.authenticfeet-theme/5.11.48/img/payments/payment-1___2d022968a396503cff01081852ba796d.svg" alt="Visa">
-          <img src="https://authenticfeet.vtexassets.com/assets/vtex/assets-builder/authenticfeet.authenticfeet-theme/5.11.48/img/payments/payment-0___37f2f2d921b0639851a7d0ab7ac28b1c.svg" alt="Mastercard">
-          <img src="https://authenticfeet.vtexassets.com/assets/vtex/assets-builder/authenticfeet.authenticfeet-theme/5.11.48/img/payments/payment-5___b629ea77db9e0ab4d410296ae5f4d3f2.svg "alt="Amex">
-          <img src="https://authenticfeet.vtexassets.com/assets/vtex/assets-builder/authenticfeet.authenticfeet-theme/5.11.48/img/payments/payment-2___295bec1fe785398ae6bffe1636460c11.svg" alt="Elo">
-          <img src="https://authenticfeet.vtexassets.com/assets/vtex/assets-builder/authenticfeet.authenticfeet-theme/5.11.48/img/payments/payment-3___9be545380e4403eacf5b373227bfc52a.svg" alt="Hipercard">
-          <img src="https://authenticfeet.vtexassets.com/assets/vtex/assets-builder/authenticfeet.authenticfeet-theme/5.11.48/img/payments/payment-3___9be545380e4403eacf5b373227bfc52a.svg" alt="Hiper">
+          <img
+            src="https://authenticfeet.vtexassets.com/assets/vtex/assets-builder/authenticfeet.authenticfeet-theme/5.11.48/img/payments/payment-1___2d022968a396503cff01081852ba796d.svg"
+            alt="Visa">
+          <img
+            src="https://authenticfeet.vtexassets.com/assets/vtex/assets-builder/authenticfeet.authenticfeet-theme/5.11.48/img/payments/payment-0___37f2f2d921b0639851a7d0ab7ac28b1c.svg"
+            alt="Mastercard">
+          <img
+            src="https://authenticfeet.vtexassets.com/assets/vtex/assets-builder/authenticfeet.authenticfeet-theme/5.11.48/img/payments/payment-5___b629ea77db9e0ab4d410296ae5f4d3f2.svg "
+            alt="Amex">
+          <img
+            src="https://authenticfeet.vtexassets.com/assets/vtex/assets-builder/authenticfeet.authenticfeet-theme/5.11.48/img/payments/payment-2___295bec1fe785398ae6bffe1636460c11.svg"
+            alt="Elo">
+          <img
+            src="https://authenticfeet.vtexassets.com/assets/vtex/assets-builder/authenticfeet.authenticfeet-theme/5.11.48/img/payments/payment-3___9be545380e4403eacf5b373227bfc52a.svg"
+            alt="Hipercard">
+          <img
+            src="https://authenticfeet.vtexassets.com/assets/vtex/assets-builder/authenticfeet.authenticfeet-theme/5.11.48/img/payments/payment-3___9be545380e4403eacf5b373227bfc52a.svg"
+            alt="Hiper">
         </div>
         <p>Parcelamento em até 6x sem juros com mínimo de R$100*</p>
       </div>

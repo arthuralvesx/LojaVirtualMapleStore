@@ -32,6 +32,26 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(trocarImagem, 4000);
 });
 
+//ação mostrar nome usuario logado
+function atualizarUsuarioHeader() {
+  const usuario = lsGet('usuarioLogado', null);
+  const spanNome = document.getElementById('olaUsuario');
+
+  if (!spanNome) return;
+
+  if (usuario) {
+    spanNome.textContent = `Olá, ${usuario.email}`;
+    spanNome.style.display = "inline";
+  } else {
+    spanNome.style.display = "none";
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  iniciarLoginCadastro();
+  atualizarUsuarioHeader();
+});
+
 //login e cadastro
 function iniciarLoginCadastro() {
   const fCadastro = document.getElementById('formCadastro');

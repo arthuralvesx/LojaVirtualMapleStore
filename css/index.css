@@ -296,3 +296,16 @@ a {
   font-size: 13px;
   border-top: 1px solid #eee;
 }
+
+.user-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ola-user {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
