@@ -310,3 +310,23 @@ a {
   font-size: 14px;
   font-weight: 500;
 }
+
+.ola-user,
+.botao-sair {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    align-self: center;
+    text-decoration: none;
+}
+
+.botao-sair {
+    margin-left: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.botao-sair:hover {
+    opacity: 0.8;
+}

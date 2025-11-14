@@ -71,6 +71,7 @@
 .item-carrinho {
     padding: 20px 0;
     font-size: 0.95em;
+    border-top: 1px solid #f0f0f0;
 }
 
 .col-info-item {
@@ -138,17 +139,15 @@
     background-color: transparent;
     color: #000;
     border: 1px solid #999;
-    width: 576px;
+    width: 100%;
     padding: 12px;
     border-radius: 4px;
     cursor: pointer;
     font-weight: 500;
     font-size: 12px;
     transition: 0.2s;
-}
-
-.btn-secondary a {
-    color: inherit;
+    margin-top: 20px;
+    box-sizing: border-box; 
 }
 
 .btn-secondary:hover {
@@ -185,28 +184,11 @@
 
 }
 
-.btn-secondary {
-    background-color: transparent;
-    color: #000;
-    border: 1px solid #999;
-    width: 100%;
-    padding: 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 12px;
-    transition: 0.2s;
-}
-
-.btn-secondary:hover {
-    background-color: #eaeaea;
-}
-
 .btn-primary {
     background-color: #000;
     color: #fff;
     border: none;
-    width: 350px;
+    width: 100%;
     padding: 12px;
     border-radius: 4px;
     cursor: pointer;
@@ -214,23 +196,11 @@
     font-size: 13px;
     transition: 0.2s;
     margin-top: 20px;
+    box-sizing: border-box;
 }
 
 .btn-primary:hover {
     background-color: #333;
-}
-
-.icone-seta {
-    margin-left: 10px;
-    font-size: 1.4em;
-}
-
-.resumo-bloco-vazio {
-    background-color: white;
-    margin-top: 10px;
-    border-radius: 5px;
-    height: 80px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
 }
 
 .voltar {
@@ -249,4 +219,79 @@
 
 .voltar img:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 900px) {
+    .secao-compras {
+        padding: 30px;
+    }
+
+    .tabela-cabecalho {
+        display: none;
+    }
+
+    .item-carrinho {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 25px 0;
+        position: relative;
+    }
+
+    .col-info-item {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .img-item {
+        margin-right: 0;
+        width: 80px;
+        height: 80px;
+    }
+
+    .preco-item,
+    .controle-qtd-item,
+    .valor-subtotal-item {
+        width: auto;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .btn-remover-item {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .carrinho-conteudo-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .secao-resumo {
+        width: 100%;
+        align-self: stretch;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagina-carrinho-container {
+        width: 95%;
+        margin-top: 20px;
+    }
+    
+    .carrinho-cabecalho h1 {
+        font-size: 1.8em;
+    }
+
+    .secao-compras {
+        padding: 15px;
+    }
 }

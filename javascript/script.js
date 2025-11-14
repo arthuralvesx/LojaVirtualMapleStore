@@ -36,20 +36,42 @@ document.addEventListener('DOMContentLoaded', () => {
 function atualizarUsuarioHeader() {
   const usuario = lsGet('usuarioLogado', null);
   const spanNome = document.getElementById('olaUsuario');
+  const botaoSair = document.getElementById('botaoSair');
 
-  if (!spanNome) return;
+  //Verificamos os dois elementos
+  if (!spanNome || !botaoSair) return;
 
   if (usuario) {
     spanNome.textContent = `Olá, ${usuario.email}`;
     spanNome.style.display = "inline";
+    botaoSair.style.display = "inline";
   } else {
     spanNome.style.display = "none";
+    botaoSair.style.display = "none";
   }
+}
+
+// Função para configurar o botão de sair
+function configurarBotaoSair() {
+    const botaoSair = document.getElementById('botaoSair');
+  
+    if (botaoSair) {
+      botaoSair.addEventListener('click', (e) => {
+        e.preventDefault();
+  
+        localStorage.removeItem('usuarioLogado');
+  
+        //Atualizar o header (a função esconde os itens)
+        atualizarUsuarioHeader(); 
+
+      });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   iniciarLoginCadastro();
   atualizarUsuarioHeader();
+  configurarBotaoSair();
 });
 
 //login e cadastro
@@ -174,7 +196,7 @@ const produtos = [
     name: "Tenis Mizuno Wave Prophecy B 2 Verde/rosa",
     price: "R$ 1.799,90",
     image: "https://maze.jetassets.com.br/produto/20241003090044_3354996646_D.jpg",
-    description: "O novo cabedal mais leve e macio torna o legado do WAVE PROPHECY mais duradouro. Com technologia Smooth Ride: ranhuras no solado que permitem maior flexibilidade nas regiões de transição da passada. Evolução do U4iC, sendo mais leve e mais macio, proporcionando maior conforto durante a corrida. X10 composto de borracha e carbono que oferece maior durabilidade e aderência ao solado na entrada da pisada. Mizuno Wave, placa WAVE em TPU que proporciona maior estabilidade e absorção de impacto."
+    description: "O novo cabedal mais leve e macio torna o legado do WAVE PROPHECY mais duradouro. Com technologia Smooth Ride: ranhuras no solado que permitem maior flexibilidade nas regiões de transição da passada. Evolução do U4iC, sendo mais leve e mais macio, proporcionando maior conforto during a corrida. X10 composto de borracha e carbono que oferece maior durabilidade e aderência ao solado na entrada da pisada. Mizuno Wave, placa WAVE em TPU que proporciona maior estabilidade e absorção de impacto."
   },
   {
     name: "Tenis Mizuno Wave Prophecy Ls Dourado",
