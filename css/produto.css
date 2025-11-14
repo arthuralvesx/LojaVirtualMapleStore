@@ -1,3 +1,4 @@
+/* ========================== BASE MELHORADA ========================== */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -15,115 +16,119 @@
 
 .container-produto {
     display: flex;
+    gap: 40px;
+    width: 100%;
     max-width: 1200px;
 }
 
+/* ========================== GALERIA ========================== */
 .galeria-imagens-produto {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    border-radius: 10px;
 }
 
 .imagem-principal-produto {
     width: 100%;
-    height: 100%;
     border-radius: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0 0px 15px #706e6e0d;
+    margin-bottom: 15px;
+    box-shadow: 0 0px 15px #0000000d;
 }
 
+/* ========================== DETALHES ========================== */
 .detalhes-produto {
     flex: 1;
     padding: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    gap: 20px;
 }
 
 .titulo-produto {
-    font-size: 2.2em;
+    font-size: clamp(1.8rem, 2.5vw, 2.4rem);
     font-weight: 700;
     color: #333;
-    margin-bottom: 10px;
     line-height: 1.2;
 }
 
 .preco-produto {
-    font-size: 2.5em;
+    font-size: clamp(2rem, 3vw, 2.7rem);
     font-weight: 800;
     color: #333;
-    margin-bottom: 35px;
+    margin-bottom: 10px;
 }
 
 .metodo-pagamento {
-    font-size: 0.6em;
+    font-size: 0.7em;
     font-weight: 600;
     color: #555;
-    vertical-align: super;
     margin-left: 8px;
 }
 
+/* ========================== TAMANHOS ========================== */
 .botoes-tamanho {
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
 }
 
 .botao-tamanho {
-    background-color: #f0f0f0;
+    background-color: #f4f4f4;
     color: #333;
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 15px 22px;
-    font-size: 1.1em;
+    padding: 14px 20px;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 .botao-tamanho:hover {
     background-color: #000;
     color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px #00000020;
 }
 
+/* ========================== BOTÕES ========================== */
 .acoes {
-    margin-top: auto;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
 }
 
 .btn-primary {
     background-color: #000;
     color: #fff;
     border: none;
-    width: 576px;
-    padding: 12px;
-    border-radius: 4px;
+    width: 100%;
+    max-width: 100%;
+    padding: 14px;
+    border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 15px;
     transition: 0.2s;
-    margin-top: 20px;
 }
 
 .btn-primary:hover {
     background-color: #333;
 }
 
+/* ========================== BTN VOLTAR ========================== */
 .voltar {
     position: absolute;
     top: 15px;
     left: 20px;
     cursor: pointer;
+    z-index: 10;
 }
 
 .voltar img {
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     filter: invert(1);
     transition: transform 0.2s ease;
 }
@@ -132,9 +137,113 @@
     transform: scale(1.1);
 }
 
+/* ========================== DESCRIÇÃO ========================== */
 .descricao {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 25px;
+    padding: 0 20px;
+}
+
+
+
+/* ================================================================= */
+/* ========================== RESPONSIVIDADE ======================== */
+/* ================================================================= */
+
+/* ====== 1400px ↓ ====== */
+@media (max-width: 1400px) {
+    .container-produto {
+        gap: 30px;
+    }
+}
+
+/* ====== 1024px – Tablets Grandes ====== */
+@media (max-width: 1024px) {
+    .container-produto {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .detalhes-produto {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .botoes-tamanho {
+        justify-content: center;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+}
+
+/* ====== 768px – Tablets ====== */
+@media (max-width: 768px) {
+    .body {
+        padding: 20px 10px;
+    }
+
+    .galeria-imagens-produto {
+        width: 100%;
+    }
+
+    .imagem-principal-produto {
+        height: auto;
+    }
+}
+
+/* ====== 600px – Celulares Grandes ====== */
+@media (max-width: 600px) {
+    .detalhes-produto {
+        padding: 10px;
+    }
+
+    .titulo-produto {
+        font-size: 1.6rem;
+    }
+
+    .preco-produto {
+        font-size: 2rem;
+    }
+
+    .botao-tamanho {
+        padding: 12px 18px;
+    }
+}
+
+/* ====== 425px – Smartphones ====== */
+@media (max-width: 425px) {
+    .titulo-produto {
+        font-size: 1.5rem;
+    }
+
+    .preco-produto {
+        font-size: 1.8rem;
+    }
+
+    .botao-tamanho {
+        font-size: 0.9rem;
+        padding: 10px 16px;
+    }
+
+    .voltar img {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* ====== 360px ↓ — Smartphones pequenos ====== */
+@media (max-width: 360px) {
+    .botao-tamanho {
+        padding: 8px 14px;
+    }
+
+    .preco-produto {
+        font-size: 1.6rem;
+    }
 }
